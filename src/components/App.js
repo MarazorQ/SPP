@@ -1,5 +1,6 @@
 import React from 'react';
 import Inputs from './Inputs';
+import Frame from './Frame';
 
 function App() {
     return(
