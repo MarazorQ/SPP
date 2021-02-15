@@ -5,7 +5,9 @@ function App() {
     return(
         <div>
             <h1>Task Manager</h1>
+            <hr></hr>
             <Inputs/>
+            <Frame/>
         </div>
     )
     
