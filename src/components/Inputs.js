@@ -19,7 +19,7 @@ function Inputs(){
                 <option value="2">Two</option>
                 <option value="3">Three</option>
             </select>
-            <div className="form-group mx-sm-3 mb-2">
+            <div className="form-group mx-sm-3 mb">
                 <input type="date" className="form-control" placeholder="Date"></input>
             </div>
             </div>
