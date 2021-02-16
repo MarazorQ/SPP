@@ -6,18 +6,19 @@ function Inputs(){
         <form className="form-inline">
             <div className="form-group mx-sm-3 mb-2">
                 <label for="inputPassword2" class="sr-only">Task Name</label>
-                <input type="text" className="form-control" id="inputPassword2" placeholder="task name"></input>
+                <input type="text" className="form-control" id="inputPassword2" placeholder="Task name"></input>
             </div>
-            <div className="form-group mx-sm-3 mb-2">
+            {/* <div className="form-group mx-sm-3 mb-2">
                 <label for="inputPassword2" class="sr-only">status</label>
                 <input type="text" className="form-control" id="inputPassword2" placeholder="status" readonly></input>
-            </div>
+            </div> */}
             <div className="form-group mx-sm-3 mb-2">
             <select className="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                <option selected>Choose...</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option selected>Status</option>
+                <option value="1">To Do</option>
+                <option value="2">Doing</option>
+                <option value="3">Done</option>
+                <option value="4">Questions</option>
             </select>
             <div className="form-group mx-sm-3 mb">
                 <input type="date" className="form-control" placeholder="Date"></input>
