@@ -18,7 +18,7 @@ class Inputs extends React.Component{
 
     handleSubmit(event){
         this.props.updateData(this.state.value);
-        //disaeble reboot page
+        //disaeble reboot
         event.preventDefault();
     }
 
