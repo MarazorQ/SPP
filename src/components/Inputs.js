@@ -9,15 +9,22 @@ class Inputs extends React.Component{
             name: ''
         };
         this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
     
     handleChange(event){
         this.setState({value:event.target.value});
     }
 
+    handleSubmit(event){
+        this.props.updateData(this.state.value);
+        //disaeble reboot page
+        event.preventDefault();
+    }
+
     render(){
         return(
-            <form className="form-inline" onSubmit={()=> {this.props.updateData(this.state.value)}}>
+            <form className="form-inline" onSubmit={this.handleSubmit}>
                 <div className="form-group mx-sm-3 mb-2">
                     <label for="inputPassword2" class="sr-only">Task Name</label>
                     <input type="text" className="form-control" id="inputPassword2" placeholder="Task name" value={this.state.value} onChange={this.handleChange}></input>
