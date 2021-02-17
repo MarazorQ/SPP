@@ -18,7 +18,7 @@ class App extends React.Component {
                 <p>State: {this.state.name}</p>
                 <hr></hr>
                 <Inputs updateData={this.updateData}/>
-                <Frame/>
+                <Frame Name={this.state.name}/>
             </div>
         )
     }

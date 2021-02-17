@@ -9,7 +9,7 @@ class Inputs extends React.Component{
 
     render(){
         return(
-            <form className="form-inline">
+            <form className="form-inline" onSubmit={()=> {this.props.updateData(this.state.name)}}>
                 <div className="form-group mx-sm-3 mb-2">
                     <label for="inputPassword2" class="sr-only">Task Name</label>
                     <input type="text" className="form-control" id="inputPassword2" placeholder="Task name"></input>
@@ -34,7 +34,7 @@ class Inputs extends React.Component{
                     {/* <label for="exampleFormControlFile1">Example file input</label> */}
                     <input type="file" className="form-control-file" id="exampleFormControlFile1"></input>
                 </div>
-                <button onClick={()=> {this.props.updateData(this.state.name)}} type="submit" className="btn btn-primary mb-2">Add new task</button>
+                <button type="submit" className="btn btn-primary mb-2">Add new task</button>
             </form>
         )
     }
