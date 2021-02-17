@@ -3,6 +3,9 @@ import React from 'react';
 
 
 class Inputs extends React.Component{
+    state = {
+        name: 'Бумеранг вернулся назад'
+    };
 
     render(){
         return(
@@ -31,7 +34,7 @@ class Inputs extends React.Component{
                     {/* <label for="exampleFormControlFile1">Example file input</label> */}
                     <input type="file" className="form-control-file" id="exampleFormControlFile1"></input>
                 </div>
-                <button type="submit" className="btn btn-primary mb-2">Add new task</button>
+                <button onClick={()=> {this.props.updateData(this.state.name)}} type="submit" className="btn btn-primary mb-2">Add new task</button>
             </form>
         )
     }

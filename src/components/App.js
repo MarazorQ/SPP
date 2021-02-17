@@ -15,8 +15,9 @@ class App extends React.Component {
         return(
             <div>
                 <h1>Task Manager</h1>
+                <p>State: {this.state.name}</p>
                 <hr></hr>
-                <Inputs/>
+                <Inputs updateData={this.updateData}/>
                 <Frame/>
             </div>
         )
