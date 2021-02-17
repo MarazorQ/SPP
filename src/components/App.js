@@ -3,6 +3,13 @@ import Inputs from './Inputs';
 import Frame from './Frame';
 
 class App extends React.Component {
+    state = {
+        name: 'Бумеранг не запущен'
+    };
+
+    updateData = (value) => {
+        this.setState({name: value})
+    }
 
     render(){
         return(
