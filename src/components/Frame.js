@@ -1,8 +1,14 @@
 import React from 'react';
 
 class Frame extends React.Component{
-
     render(){
+        if (!this.props.data.value || !this.props.data.status || !this.props.data.date){
+            return (
+                <div>No data to show</div>
+            )
+        }
+        console.log("PROPS + ARR", this.props.dataArr);
+
         return(
             <table className="table table-striped">
                 <thead>
@@ -12,27 +18,17 @@ class Frame extends React.Component{
                     <th>File</th>
                 </thead>
                 <tbody>
-                    <tr>
+                    {this.props.dataArr.map((i, index) => {
+                        return (
+                            <tr key={`${index}-${i.value}--${i.date}`}>
                         <th scope="row">1</th>
-                        <td>state: {this.props.Name}</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <td>{i.value}</td>
+                        <td>{i.status}</td>
+                        <td>{i.date}</td>
                         <td><button className="btn btn-primary">Download</button></td>
                     </tr>
-                        <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        <td><button className="btn btn-primary">Download</button></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td><button className="btn btn-primary">Download</button></td>
-                    </tr>
+                        )
+                    })}
                 </tbody>
             </table>
         )
